@@ -4,12 +4,12 @@ window.addEventListener('DOMContentLoaded', function () {
     button.appendChild(btnText);
     document.body.appendChild(button);
 
-    
+    button.addEventListener('click',addSquare)
 });
 
 function addSquare(){
-    let squareDiv = documents
-    button.addEventListener('click', 
+    let squareDiv = documents;
+    
 }
 
 
