@@ -4,9 +4,18 @@
 
 .sqr-div {
     display: inline-flex;
-    flex-flow: column wrap;
+    flex-wrap: wrap;
     background:black;
     width:10em;
     height: 10em;
-    border: 2px solid red;
+    border: 2px dashed red;
+    margin: 1.5px;
 }
+
+div {
+    color: white;
+
+    align-items: center;
+
+    justify-content: center
+ }
