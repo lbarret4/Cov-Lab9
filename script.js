@@ -26,7 +26,7 @@ function idSqrShow(e) {
     if (e.type === 'mouseover') {
         e.target.style.color = "white";
     } else if (e.type === 'mouseleave') {
-        e.target.style.color = "black";
+        e.target.style.color = `${e.target.style.backgroundColor}`
     }
 }
     function setColor(e) {
