@@ -4,8 +4,8 @@ window.addEventListener('DOMContentLoaded', function () {
     button.appendChild(btnText);
     button.setAttribute('id', 'addSqrBtn');
     document.body.appendChild(button);
-
     button.addEventListener('click', addSquare)
+    
 });
 
 function addSquare() {
@@ -17,7 +17,7 @@ function addSquare() {
     squareDiv.appendChild(squareDivText);
     squareDiv.addEventListener('mouseover', idSqrShow);
     squareDiv.addEventListener('mouseleave', idSqrShow);
-    squareDiv.addEventListener('dblclick', getColor);
+    squareDiv.addEventListener('dblclick', setColor);
     squareDiv.setAttribute('id', `${(numSqr + 1)}`);
     document.body.appendChild(squareDiv);
 }
@@ -28,11 +28,11 @@ function idSqrShow(e) {
     } else if (e.type === 'mouseleave') {
         e.target.style.color = "black";
     }
-
+}
     function setColor(e) {
         let [red, green, blue] = [Math.ceil(Math.random() * 255), Math.ceil(Math.random() * 255), Math.ceil(Math.random() * 255)];
         e.target.style.background = `rgb(${red},${green},${blue})`;
     }
 
 
-}
+
