@@ -1,0 +1,12 @@
+#addSqrBtn {
+    display:block;
+}
+
+.sqr-div {
+    display: inline-flex;
+    flex-flow: column wrap;
+    background:black;
+    width:10em;
+    height: 10em;
+    border: 2px solid red;
+}

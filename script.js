@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 function addSquare(){
-    let squareDiv = documents;
+    let squareDiv ;
     
 }
 
