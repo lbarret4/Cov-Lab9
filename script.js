@@ -17,7 +17,8 @@ function addSquare() {
     squareDiv.appendChild(squareDivText);
     squareDiv.addEventListener('mouseover', idSqrShow);
     squareDiv.addEventListener('mouseleave', idSqrShow);
-    squareDiv.addEventListener('dblclick', setColor);
+    squareDiv.addEventListener('click', setColor);
+    squareDiv.addEventListener('dblclick',rmSquare);
     squareDiv.setAttribute('id', `${(numSqr + 1)}`);
     document.body.appendChild(squareDiv);
 }
@@ -32,6 +33,21 @@ function idSqrShow(e) {
     function setColor(e) {
         let [red, green, blue] = [Math.ceil(Math.random() * 255), Math.ceil(Math.random() * 255), Math.ceil(Math.random() * 255)];
         e.target.style.background = `rgb(${red},${green},${blue})`;
+    }
+
+    function rmSquare(e){
+        let id = e.target.getAttribute('id');
+        let adjacentSqr; 
+  
+        
+      if(id % 2 === 0){
+         adjacentSqr = e.target.nextSibling;
+        ( adjacentSqr !== null) ?   adjacentSqr.remove() : window.alert('Unable to remove next square')  
+      }else{
+          adjacentSqr = e.target.previousSibling;
+        ( adjacentSqr !== null && adjacentSqr.nodeName !== 'BUTTON') ?   adjacentSqr.remove() : window.alert('Unable to remove previous square') ;
+      }
+      
     }
 
 
